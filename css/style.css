@@ -36,6 +36,9 @@ main{
     background-color: #00e064;
   
 }
+.grid_container{
+    padding: 100px 0;
+}
 
 .grid{
     

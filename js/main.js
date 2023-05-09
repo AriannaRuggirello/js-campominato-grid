@@ -18,7 +18,6 @@ document.getElementById("play_button").addEventListener("click",
             // creare l'elemento quadrato all'interno della griglia
             
             const newSquare = createGridSquare('div','square'); 
-            
 
             // numero ogni quadratino
             let num = i;
