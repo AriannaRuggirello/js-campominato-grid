@@ -8,22 +8,14 @@
     height: 100vh;
 }
 
-main{
-    background-color: #00e064;
-    height: calc(100vh - 100px);
-}
-
-footer{
-    height: 50px;
-
-}
-
 .row{
     height: 50px;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
+
+/* header */
 
 img{
     max-width: 50px;
@@ -35,4 +27,33 @@ button{
     color: #001533;
     padding: 5px;
     border-style: none;
+}
+
+/* main */
+
+main{
+    height: calc(100vh - 100px);
+    background-color: #00e064;
+}
+
+.grid{
+    display: none;
+    border: #001533 2px solid;
+    width: 70%;
+    height: 70%;
+    margin: 0 auto ; 
+}
+
+.visible{
+    display: block;
+}
+
+.square{
+    
+    border: 1px solid black;
+}
+
+/* footer */
+footer{
+    height: 50px;
 }
