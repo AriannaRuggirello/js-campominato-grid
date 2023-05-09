@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    height: 100vh;
+}
+
+main{
+    background-color: #00e064;
+    height: calc(100vh - 100px);
+}
+
+footer{
+    height: 50px;
+
+}
+
+.row{
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+img{
+    max-width: 50px;
+}
+
+button{
+    width: 100px;
+    background-color: #00e064;
+    color: #001533;
+    padding: 5px;
+    border-style: none;
+}
