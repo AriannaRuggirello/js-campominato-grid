@@ -4,9 +4,13 @@
 // Ci saranno quindi 10 caselle per ognuna delle 10 righe.
 // Quando l’utente clicca su ogni cella, la cella cliccata si colora di azzurro ed emetto un messaggio in console con il numero della cella cliccata.
 
+// Seleziona il pulsante
+const button = document.querySelector('#play_button');
+
+
 // L’utente clicca su un bottone che genererà una griglia di gioco quadrata.
 document.getElementById("play_button").addEventListener("click", 
-    function()
+    function Game()
     {   
         let visibleGrid = document.querySelector('div.grid_container').classList;
         visibleGrid.remove("hidden");
@@ -32,8 +36,12 @@ document.getElementById("play_button").addEventListener("click",
             
             let gridElement = document.querySelector('div.grid').append(newSquare)
             newSquare.append(num);
+           
         }
        
+        button.removeEventListener('click', Game);
+
+        
     });
 
 
