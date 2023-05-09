@@ -57,7 +57,8 @@ main{
 }
 
 .square.clicked-true{
-    background-color: aqua;
+    background-color: #001533;
+    color: #00e064;
 }
 
 .hidden{
