@@ -6,12 +6,13 @@
 
 .container{
     height: 100vh;
+    
 }
 
 .row{
     height: 50px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -51,9 +52,19 @@ main{
     
 }
 
-.square{
+.square-easy{
     width: calc(100% / 10);
     border: 1px solid black;  
+}
+
+.square-medium{
+    width: calc(100% / 9);
+    border: 1px solid black; 
+}
+
+.square-hard{
+    width: calc(100% / 7);
+    border: 1px solid black; 
 }
 
 .square.clicked-true{

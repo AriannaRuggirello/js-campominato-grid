@@ -4,43 +4,43 @@
 // Ci saranno quindi 10 caselle per ognuna delle 10 righe.
 // Quando l’utente clicca su ogni cella, la cella cliccata si colora di azzurro ed emetto un messaggio in console con il numero della cella cliccata.
 
-// Seleziona il pulsante
-const button = document.querySelector('#play_button');
-
+let button = document.getElementById("play_button");
 
 // L’utente clicca su un bottone che genererà una griglia di gioco quadrata.
-document.getElementById("play_button").addEventListener("click", 
+button.addEventListener("click", 
     function Game()
     {   
-        let visibleGrid = document.querySelector('div.grid_container').classList;
-        visibleGrid.remove("hidden");
-        visibleGrid.add("visible");
-        
+        // seleziono il contenitore 
+        let grid = document.querySelector('div#grid_container');
+        grid.classList.remove("hidden");
+        // lo rendo visibile al clik sul pulpsante
+        grid.classList.add("visible");
+        // reset dei numeri selezionati in pagina
+        let gridElement = document.querySelector('div.grid').innerHTML=''
 
         // Ogni cella ha un numero progressivo, da 1 a 100.
         for(let i = 1; i <= 100 ; i++){
+
             // creare l'elemento quadrato all'interno della griglia
-            
             const newSquare = createGridSquare('div','square'); 
 
             // numero ogni quadratino
             let num = i;
             
+            // Quando l’utente clicca su ogni cella
             newSquare.addEventListener('click', 
             function(){
-                // Quando l’utente clicca su ogni cella, la cella cliccata si colora di azzurro ed emetto un messaggio in console con il numero della cella cliccata.
+                // la cella cliccata si colora di azzurro 
                 newSquare.classList.add('clicked-true');
+                // emetto un messaggio in console con il numero della cella cliccata.
                 console.log(num);
             })
 
-            
-            let gridElement = document.querySelector('div.grid').append(newSquare)
+            // inserisco dentro alla griglia i quadratini
+            gridElement = document.querySelector('div.grid').append(newSquare)
+            // inserisco dentro ogni quadratino il numero
             newSquare.append(num);
-           
         }
-       
-        button.removeEventListener('click', Game);
-
         
     });
 
